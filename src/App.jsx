@@ -1,13 +1,13 @@
 import "./App.css";
-import ButtonDarkMode from "./components/ButtonDarkMode";
-import CardPhrase from "./components/CardPhrase";
+import Wrapper from "./components/wrapper";
+import { DarkModeProvider } from "./context";
 
 function App() {
+    
   return (
-    <>
-      <CardPhrase />
-      <ButtonDarkMode />
-    </>
+    <DarkModeProvider>
+      <Wrapper />
+    </DarkModeProvider>
   );
 }
 
