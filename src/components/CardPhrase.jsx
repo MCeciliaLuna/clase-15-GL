@@ -1,4 +1,13 @@
+import { useEffect } from "react";
+import useStore from "../api";
+
 const CardPhrase = () => {
+ const { fetchData } = useStore()
+
+ useEffect(() => {
+  fetchData()
+ }, [])
+ 
   return (
     <div className="d-flex justify-content-center">
       <div className="card w-25 rounded-0">
