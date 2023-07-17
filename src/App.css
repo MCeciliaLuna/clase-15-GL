@@ -10,6 +10,12 @@ body {
   text-align: center;
 }
 
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
 .form-check-input:checked {
-  background-color: black;
+  background-color: #000814;
 }

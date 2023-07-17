@@ -1,15 +1,16 @@
-
-import { useContext } from 'react';
-import ButtonDarkMode from './ButtonDarkMode';
-import CardPhrase from './CardPhrase';
-import { DarkModeContext } from '../context';
+import { useContext } from "react";
+import ButtonDarkMode from "./ButtonDarkMode";
+import CardPhrase from "./CardPhrase";
+import { DarkModeContext } from "../context";
 
 const Wrapper = () => {
-  const [darkMode, setDarkMode] = useContext(DarkModeContext)
+  const [darkMode, setDarkMode] = useContext(DarkModeContext);
   return (
-    <section style={{backgroundColor: darkMode ? '#000' : '#fff'}}>
-      <ButtonDarkMode />
-      <CardPhrase />
+    <section style={{ backgroundColor: darkMode ? "#000814" : "#f0ead2" }}>
+      <div>
+        <ButtonDarkMode />
+        <CardPhrase />
+      </div>
     </section>
   );
 };

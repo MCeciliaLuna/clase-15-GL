@@ -1,27 +1,39 @@
+import { useContext } from "react";
+import { DarkModeContext } from "../context";
 import { useEffect } from "react";
 import useStore from "../api";
 
 const CardPhrase = () => {
- const { fetchData } = useStore()
+  const [darkMode, setDarkMode] = useContext(DarkModeContext);
 
- useEffect(() => {
-  fetchData()
- }, [])
- 
+  const { fetchData, response } = useStore();
+
+  useEffect(() => {
+    fetchData();
+    console.log(response);
+  }, []);
+
   return (
     <div className="d-flex justify-content-center">
-      <div className="card w-25 rounded-0">
-        <img
-          src="https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/04/14104549/NegroPensante10-1024x576.jpg"
-          className="card-img-top"
-          alt="meme pensante"
-        />
-        <div className="card-body">
-          <h5 className="card-title">Autor</h5>
+      <div
+        className="card w-25 rounded-0 border-0"
+        style={{ backgroundColor: darkMode ? "#001d3d" : "#fff" }}
+      >
+        <div
+          className="card-body"
+          style={{ color: darkMode ? "#f0ead2" : "#000814" }}
+        >
+          <h5 className="card-title">autor</h5>
           <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the cards content.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic totam
+            quis, ex placeat ad repellat explicabo praesentium labore
+            voluptatibus dolores dolore, minima impedit esse dicta quae. Laborum
+            veniam totam nemo? Nam, obcaecati at eaque unde, quod, ipsum aliquam
+            fugit voluptatibus sapiente nulla ducimus? Sed consequatur corrupti
+            esse, delectus maxime reprehenderit sit? Nisi, tenetur possimus
+            obcaecati id cum eveniet quibusdam totam.
           </p>
+          <p className="card-text">type</p>
         </div>
       </div>
     </div>
