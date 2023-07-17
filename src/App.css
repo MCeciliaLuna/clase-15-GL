@@ -12,8 +12,14 @@ body {
 
 section {
   height: 100vh;
+  width: 100vw;
   display: flex;
   align-items: center;
+}
+
+a{
+  text-decoration: none;
+  color: #00b4d8;
 }
 
 .form-check-input:checked {
